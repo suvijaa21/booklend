@@ -24,39 +24,33 @@ function Login(){
          console.log(response.data);
        });
      };
-
-  //      useEffect(()=>{
-  //   Axios.get('http://localhost:3001/api/getuser').then((response)=>{
-  //     setuserlist(response.data);
-  //   })
-  // },[]);
-    //   const submitform=()=>
-    //   {
-    //     userlist.map((val)=>{
-    //     console.log(val.email);
-    //   if(val.email==email){
-    //       if(val.password==password){
-    //           window.location.href = "http://localhost:3000/homepage";
-    //       }
-    //       else
-    //       alert("wrong password");
-    //   }
-    // })
-// }
-
-    return(
-        <div className='form'>
-            <input type="email" name='email' placeholder='email' onChange={(e)=>{
-        setemail(e.target.value)
-      }}/>
-            <input type="password" name="password" placeholder='password' onChange={(e)=>{
-        setpassword(e.target.value)
-      }}/>
-            <button onClick={()=>{
-                    submitform();
-                    // window.location.href='http://localhost:3000/homepage';
-            }}>submit</button>
-        </div>
-    )
+    return (
+      <div className='form'>
+        <input
+          type="email"
+          name="email"
+          placeholder="email"
+          onChange={(e) => {
+            setemail(e.target.value);
+          }}
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="password"
+          onChange={(e) => {
+            setpassword(e.target.value);
+          }}
+        />
+        <button
+          onClick={() => {
+            submitform();
+            window.location.href='http://localhost:3000/mypage';
+          }}
+        >
+          submit
+        </button>
+      </div>
+    );
 }
 export default Login;
